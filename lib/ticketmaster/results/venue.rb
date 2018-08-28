@@ -8,6 +8,10 @@ module Ticketmaster
       data['name']
     end
 
+    def images
+      Result.array(data['images'], request, 'Ticketmaster::Image')
+    end
+
     def address
       data['address']
     end
@@ -42,6 +46,22 @@ module Ticketmaster
 
     def url
       data['url']
+    end
+
+    def box_office_info
+      data['boxOfficeInfo']
+    end
+
+    def parking_info
+      data['parkingDetail']
+    end
+
+    def accessible_seating_detail
+      data['accessibleSeatingDetail']
+    end
+
+    def general_info
+      data['generalInfo']
     end
 
     def reload
