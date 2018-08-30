@@ -28,6 +28,10 @@ module Ticketmaster
       Result.array(data['classifications'], request, 'Ticketmaster::Classification')
     end
 
+    def external_links
+      data['externalLinks']
+    end
+
     def reload
       data = request.client.get_attraction(id).data
       self
