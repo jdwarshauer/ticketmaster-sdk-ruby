@@ -9,11 +9,11 @@ module Ticketmaster
     end
 
     def genres
-      Result.array(data['segment']['_embedded']['genres'], request, 'Ticketmaster::Classification') if data['segment']['_embedded']['genres']
+      data['genre']['name'] if data['genre'].present?
     end
 
     def subgenres
-      Result.array(data['segment']['_embedded']['subgenres'], request, 'Ticketmaster::Classification') if data['segment']['_embedded']['subgenres']
+      data['subGenre']['name'] if data['subGenre'].present?
     end
 
     def type
