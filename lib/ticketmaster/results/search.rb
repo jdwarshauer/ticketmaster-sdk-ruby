@@ -15,6 +15,7 @@ module Ticketmaster
     end
 
     def total_pages
+      return 0 if results.empty?
       data['page']['totalPages']
     end
 
