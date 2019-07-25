@@ -17,7 +17,7 @@ module Ticketmaster
     end
 
     def state
-      data['state']
+      data['state']['name']
     end
 
     def city
