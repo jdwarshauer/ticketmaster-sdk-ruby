@@ -13,7 +13,7 @@ module Ticketmaster
     end
 
     def address
-      data['address']
+      data['address']['line1']
     end
 
     def state
