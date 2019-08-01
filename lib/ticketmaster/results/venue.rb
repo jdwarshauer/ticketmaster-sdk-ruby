@@ -13,19 +13,19 @@ module Ticketmaster
     end
 
     def address
-      data['address']['line1']
+      data['address']
     end
 
     def state
-      data['state']['name']
+      data['state']
     end
 
     def city
-      data['city']['name']
+      data['city']
     end
 
     def country
-      data['country']['name']
+      data['country']
     end
 
     def country_code
